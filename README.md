@@ -22,3 +22,7 @@ Create all files that you need and import in principal file
 ## Config Redux
 
 npm install react-redux redux
+
+## Install firebase
+
+npm install firebase@8.10.0
