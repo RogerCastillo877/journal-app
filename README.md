@@ -18,3 +18,7 @@ To install the last version npm i react-router-dom
 ## Set up files for styles
 
 Create all files that you need and import in principal file
+
+## Config Redux
+
+npm install react-redux redux
