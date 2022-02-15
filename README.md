@@ -30,3 +30,7 @@ npm install firebase@8.10.0
 ## Middleware
 
 npm install --save redux-thunk
+
+## Install email validator
+
+npm i validator
