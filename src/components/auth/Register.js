@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
+import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 import { removeError, setError } from '../../actions/ui';
 import { useForm } from '../../hooks/UseForm'
 
@@ -24,7 +25,7 @@ export const Register = () => {
     e.preventDefault();
     
     if( isFormValid() ) {
-      console.log('Correcto');
+      dispatch( startRegisterWithEmailPasswordName(email, password, name) )
     }    
   }
 
@@ -36,7 +37,7 @@ export const Register = () => {
     } else if( !validator.isEmail(email) ) {
       dispatch(setError('Email is not valid'))
       return false;
-    } else if( password !== password2 || password.length > 5 ) {
+    } else if( password !== password2 || password.length < 5 ) {
       dispatch(setError('Password should be at least 6 characters and match each other'))
       return false;
     }
