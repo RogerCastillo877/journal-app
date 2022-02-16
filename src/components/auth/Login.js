@@ -9,7 +9,7 @@ import { useForm } from '../../hooks/UseForm';
 export const Login = () => {
 
   const dispatch = useDispatch();
-  const { msgError } = useSelector( state => state.ui )
+  const { loading, msgError } = useSelector( state => state.ui )
 
   const [ formValues, handleInputChange ] = useForm({
     email: 'correo@correo.com',
@@ -75,7 +75,9 @@ export const Login = () => {
             />
             <button
               type='submit'
-              className='btn btn-primary btn-block'>
+              className='btn btn-primary btn-block'
+              disabled={ loading }
+            >
                 Login
             </button>
             <div className='auth__social-networks'>
