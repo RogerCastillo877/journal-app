@@ -34,3 +34,7 @@ npm install --save redux-thunk
 ## Install email validator
 
 npm i validator
+
+## Install Sweet Alert 2 [https://sweetalert2.github.io/#download]
+
+npm install sweetalert2
