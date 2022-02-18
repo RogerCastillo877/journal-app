@@ -8,6 +8,9 @@
 //         imageUrl: '',
 //         date: 1234555624
 //     }
+
+import { types } from "../types/types";
+
 // }
 const initialState = {
     notes: [],
@@ -17,8 +20,13 @@ const initialState = {
 export const notesReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        // case value='':
-            // return;
+        case types.notesActive:
+            return {
+                ...state,
+                active: {
+                    ...action.payload
+                }
+            };
         default:
             return state;
     }
