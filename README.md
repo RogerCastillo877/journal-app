@@ -38,3 +38,6 @@ npm i validator
 ## Install Sweet Alert 2 [https://sweetalert2.github.io/#download]
 
 npm install sweetalert2
+
+## Install Moment.js
+npm install moment --save
