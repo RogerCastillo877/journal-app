@@ -47,11 +47,12 @@
     border-radius: 4px;
     color: $dark-grey;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
     overflow: hidden;
 }
 
-journal__entry-picture {
+.journal__entry-picture {
     height: 75px;
     width: 75px;
 }

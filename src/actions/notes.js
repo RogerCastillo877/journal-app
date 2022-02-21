@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import Swal from "sweetalert2";
 import { db } from "../firebase/firebase-config";
 import { fileUpload } from "../helpers/fileUpload";
@@ -91,3 +92,18 @@ export const startUploading = ( file ) => {
         Swal.close();
     }
 }
+
+export const startDeleting = (id) => {
+    return async( dispatch, getState) => {
+
+        const uid = getState().auth.uid;
+        await db.doc(`${ uid }/journal/notes/${ id }`).delete();
+
+        dispatch( deleteNote(id) );
+    }
+}
+
+export const deleteNote = (id) => ({
+    type: types.notesDelete,
+    payload: id
+});
