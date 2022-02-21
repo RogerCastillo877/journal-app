@@ -61,7 +61,7 @@ export const NoteScreen = () => {
             }
           </div>
           <button
-            class="btn btn-danger"
+            className="btn btn-danger"
             onClick={ handleDelete }
           >Borrar</button>
       </div>
