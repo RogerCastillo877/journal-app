@@ -7,7 +7,7 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
   const noteDate = moment(date);
   const dispacth = useDispatch();
 
-  const handleEntryClick = (id, uid) => {
+  const handleEntryClick = () => {
     dispacth(
       activeNote(id, {
         date, title, body, url
@@ -17,7 +17,7 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
 
   return (
     <div className="journal__entry pointer"
-    onClick={handleEntryClick}>
+      onClick={handleEntryClick}>
       {url && (
         <div
           className="journal__entry-picture"
