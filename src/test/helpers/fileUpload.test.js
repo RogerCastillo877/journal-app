@@ -1,4 +1,12 @@
+// import cloudinary from 'cloudinary';
 import { fileUpload } from "../../helpers/fileUpload";
+
+// cloudinary.config({ 
+//     cloud_name: 'rocas87', 
+//     api_key: '917522527141855', 
+//     api_secret: 'YNd8FALt65wfSklUzvEGQWj8BQA',
+//     secure: true
+// });
 
 describe('should test fileUpload', () => {
     
@@ -11,6 +19,11 @@ describe('should test fileUpload', () => {
         const url = await fileUpload(file)
 
         expect( typeof url ).toBe('string');
+
+        const segments = url.split('/');
+        const imageId = segments[ segments.length - 1 ].replace('.png', '');
+        console.log(imageId);
+        // cloudinary.v2.api.delete_resources(public_ids, options, callback);
     })
 
     test('should return error', async() => {

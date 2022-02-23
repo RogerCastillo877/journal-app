@@ -47,3 +47,6 @@ npm i --save-dev enzyme enzyme-adapter-react-16
 npm install --save-dev enzyme-to-json
 
 Install and then set up in file setupTest.js, in other terminal npm run test
+
+## Install cloudinary to dev
+npm install cloudinary --save-dev
