@@ -10,7 +10,7 @@ import { fileUpload } from "../../helpers/fileUpload";
 
 describe('should test fileUpload', () => {
     
-    test('should upload file and return the URL', async() => {
+    xtest('should upload file and return the URL', async() => {
         
         const resp = await fetch('https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png');
         const blob = await resp.blob();
@@ -22,8 +22,9 @@ describe('should test fileUpload', () => {
 
         const segments = url.split('/');
         const imageId = segments[ segments.length - 1 ].replace('.png', '');
-        console.log(imageId);
-        // cloudinary.v2.api.delete_resources(public_ids, options, callback);
+        await cloudinary.v2.api.delete_resources(`${imageId}`, {}, (error,result )=>{
+            console.log(error,result);
+        });
     })
 
     test('should return error', async() => {
