@@ -50,3 +50,6 @@ Install and then set up in file setupTest.js, in other terminal npm run test
 
 ## Install cloudinary to dev
 npm install cloudinary --save-dev
+
+## Install redux-mock-store
+npm install redux-mock-store --save-dev
