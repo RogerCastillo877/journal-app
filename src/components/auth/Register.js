@@ -72,7 +72,7 @@ export const Register = () => {
         />
         <input
           type="text"
-          placeholder='email'
+          placeholder='Email'
           name='email'
           className='auth__input'
           autoComplete='off'
