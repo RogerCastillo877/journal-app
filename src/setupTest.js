@@ -7,3 +7,6 @@ expect.addSnapshotSerializer(createSerializer({mode: 'deep'}));
 
 window.setImmediate = window.setTimeout;
 window.clearImmediate = window.clearTimeout;
+
+const noScroll = () => {};
+Object.defineProperty( window, 'scrollTo', { value: noScroll, writable: true });
