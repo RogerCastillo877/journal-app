@@ -8,7 +8,6 @@ import '@testing-library/jest-dom';
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares)
 
-
 const initState = {};
 
 let store = mockStore(initState);
