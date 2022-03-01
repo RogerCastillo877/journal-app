@@ -14,13 +14,7 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { AppRouter } from "../../Routers/AppRouter";
 import { act } from "react-dom/cjs/react-dom-test-utils.production.min";
 
-import Swal from 'sweetalert2';
-
 configure({adapter: new Adapter()});
-
-jest.mock( 'sweetalert2', () => ({
-    fire: jest.fn()
-}));
 
 jest.mock( '../../actions/auth', () => ({
     login: jest.fn()
